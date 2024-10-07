@@ -40,7 +40,7 @@ Welcome to Way Airlines App Challenge project! This guide will walk you through 
 2. **Clone the Repository:**
 
     ```
-    git clone https://github.com/lukesteves92/MLChallenge.git
+    git clone https://github.com/lukesteves92/WayAirlinesApp.git
     ```
 
 3. **Open Project in Android Studio:**
