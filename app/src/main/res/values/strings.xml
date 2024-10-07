@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Way Airlines</string>
+    <string name="way_airlines_content_accessibility_back">voltar</string>
 </resources>
