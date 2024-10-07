@@ -1,4 +1,4 @@
-package com.inspirecoding.wayairlines.domain.model
+package com.inspirecoding.wayairlines.domain.model.exception
 
 data class GenericException(
     val title: String? = null,

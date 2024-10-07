@@ -1,7 +1,7 @@
 package com.inspirecoding.wayairlines.extensions.string
 
 import com.google.gson.Gson
-import com.inspirecoding.wayairlines.domain.model.GenericException
+import com.inspirecoding.wayairlines.domain.model.exception.GenericException
 import java.net.URLDecoder
 import java.nio.charset.StandardCharsets
 
