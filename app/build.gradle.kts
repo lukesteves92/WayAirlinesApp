@@ -18,7 +18,7 @@ android {
         versionCode = 1
         versionName = "1.0"
         android.buildFeatures.buildConfig = true
-        buildConfigField(type = "String", name = "URL_BASE", value = "\"https://api.mercadolibre.com\"")
+        buildConfigField(type = "String", name = "URL_BASE", value = "\"{Sua URL}\"")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
@@ -132,4 +132,7 @@ dependencies {
 
     //Mockk
     testImplementation(libs.mockk)
+
+    // Turbine StateFlow
+    testImplementation(libs.turbine)
 }

@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Way Airlines</string>
     <string name="way_airlines_content_accessibility_back">voltar</string>
+    <string name="way_airlines_tv_title_apierror">ops, tivemos um probleminha!</string>
+    <string name="way_airlines_tv_body_apierror">alguma coisa aconteceu e não foi possível continuar, poderia tentar novamente?</string>
+    <string name="way_airlines_re_try">tentar novamente</string>
 </resources>

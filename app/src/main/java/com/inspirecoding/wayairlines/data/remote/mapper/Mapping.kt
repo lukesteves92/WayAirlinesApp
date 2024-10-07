@@ -6,7 +6,7 @@ import com.inspirecoding.wayairlines.domain.model.data.FlightsDataDomain
 import com.inspirecoding.wayairlines.domain.model.main.FlightsDomain
 
 internal fun FlightsResponse.toDomain() = FlightsDomain(
-    flightsDataDomain = this.flightsDataResponses.map { it.toDomain() }
+    flightsDataDomain = this.flightsDataResponses?.map { it.toDomain() }
 )
 
 internal fun FlightsDataResponse.toDomain() = FlightsDataDomain(

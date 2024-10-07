@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.inspirecoding.wayairlines.data.util.singleorthrow.singleOrThrow
 import com.inspirecoding.wayairlines.domain.usecase.GetFlightsUseCase
+import com.inspirecoding.wayairlines.extensions.string.groupFlightsByCategory
 import com.inspirecoding.wayairlines.features.home.action.HomeAction
 import com.inspirecoding.wayairlines.features.home.state.HomeState
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -24,13 +25,14 @@ class HomeViewModel(
 
     init {
         handleActions()
+        getFlights(firstCall = true)
     }
 
     private fun handleActions() {
         viewModelScope.launch {
             pendingActions.collect { action ->
                 when (action) {
-                   is HomeAction.GetFlights -> getFlights()
+                   is HomeAction.GetFlights -> getFlights(firstCall = false)
                 }
             }
         }
@@ -42,11 +44,20 @@ class HomeViewModel(
         }
     }
 
-    private fun getFlights() {
+    private fun getFlights(firstCall: Boolean) {
+        if (!firstCall) {
+            HomeState.ShowLoading.updateState()
+        }
         viewModelScope.launch {
             getFlightsUseCase.getFlights().singleOrThrow(
-                success = {},
-                error = {}
+                success = { data ->
+                    HomeState.ShowFlightsInfo(
+                        flights = data?.groupFlightsByCategory().orEmpty()
+                    ).updateState()
+                },
+                error = {
+                    HomeState.UpdateErrorView.updateState()
+                }
             )
         }
     }

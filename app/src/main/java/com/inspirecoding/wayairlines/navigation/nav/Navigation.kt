@@ -9,6 +9,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.google.accompanist.pager.ExperimentalPagerApi
+import com.inspirecoding.wayairlines.features.home.view.HomeScreen
 import com.inspirecoding.wayairlines.navigation.manager.NavigationCommand
 import com.inspirecoding.wayairlines.navigation.manager.NavigationManager
 import com.inspirecoding.wayairlines.navigation.manager.NavigationType
@@ -29,8 +30,9 @@ fun Navigation(navController: NavHostController, startDestination: String) {
         popEnterTransition = { EnterTransition.None },
         popExitTransition = { ExitTransition.None },
     ) {
-        composable(Screen.Home.route) {}
-        composable(Screen.Details.route) {}
+        composable(Screen.Home.route) {
+            HomeScreen()
+        }
     }
 }
 

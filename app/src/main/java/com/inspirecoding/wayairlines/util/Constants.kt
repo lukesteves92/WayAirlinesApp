@@ -6,11 +6,11 @@ object Constants {
     }
 
     object Numbers {
-        internal const val KEY_NUMBER_ZERO = 0
-        internal const val KEY_NUMBER_ONE = 1
         internal const val KEY_NUMBER_TWO = 2
-        internal const val KEY_NUMBER_TEN = 10
-        internal const val KEY_DEFAULT_LAT_LONG = 0.0
         internal const val KEY_DURATION_ANIMATION = 1000
+    }
+
+    object Status {
+        internal const val KEY_DONE_STATUS = "CONCLUIDO"
     }
 }

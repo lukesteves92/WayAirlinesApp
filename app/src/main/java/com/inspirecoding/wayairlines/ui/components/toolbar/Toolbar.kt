@@ -1,4 +1,4 @@
-package com.inspirecoding.wayairlines.ui.components
+package com.inspirecoding.wayairlines.ui.components.toolbar
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -32,7 +32,7 @@ fun WayAirlinesToolbar(
         title = {
             Image(
                 modifier = Modifier
-                    .size(54.dp)
+                    .size(120.dp)
                     .background(Color.Transparent),
                 painter = rememberAsyncImagePainter(R.drawable.logo_way_airlines),
                 contentScale = ContentScale.Fit,
