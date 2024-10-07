@@ -6,5 +6,5 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class FlightsDomain(
-    val flightsDataDomain: List<FlightsDataDomain>
+    val flightsDataDomain: List<FlightsDataDomain>? = null
 ): Parcelable
